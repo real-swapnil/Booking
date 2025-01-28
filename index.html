@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/_utilities.scss" />
+
+    <title>Booking</title>
+    <style>
+      #ready-to-take-off {
+        background-image: url("https://booking.webestica.com/assets/images/bg/01.jpg");
+        background-size: cover;
+        min-height: 90vh;
+        max-width: 80%;
+        background-position: center;
+        margin: auto;
+        border-radius: 0.8275rem;
+      }
+      .logo-custom {
+        min-width: 9.99rem;
+        height: 2.8725rem;
+      }
+      .btn-lg-findTicket {
+        left: 740px;
+      }
+      .ticket {
+        max-width: 92%;
+        margin: auto;
+      }
+      .specialOffer_card1 {
+        background-color: rgba(40, 167, 69, 0.1);
+      }
+      .card-btn-border {
+        border-style: dashed;
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+      .pD-img {
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light container justify-content-center"
+    >
+      <div class="container-fluid">
+        <a class="navbar me-0 nav-ud-logo position-relative" href="index.html"
+          ><img src="/Images/logo.png" class="logo-custom" alt=""
+        /></a>
+        <button
+          class="navbar-toggler position-absolute top-0 mt-4 end-0 me-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="ps-0 ps-lg-5 pe-5 navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Travelers
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Hotels</a></li>
+                <li><a class="dropdown-item" href="#">Flights </a></li>
+                <li><a class="dropdown-item" href="#">Tour</a></li>
+                <li><a class="dropdown-item" href="#">Cab</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul
+            class="pe-5 ps-xl-5 navbar-nav me-auto mb-2 mb-lg-0 d-lg-block d-lg-flex justify-content-center"
+          >
+            <li class="nav-item dropdown ps-xl-5">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Listing
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Hotels</a></li>
+                <li><a class="dropdown-item" href="#">Flights </a></li>
+                <li><a class="dropdown-item" href="#">Tour</a></li>
+                <li><a class="dropdown-item" href="#">Cab</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ps-lg-2">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Hotels</a></li>
+                <li><a class="dropdown-item" href="#">Flights </a></li>
+                <li><a class="dropdown-item" href="#">Tour</a></li>
+                <li><a class="dropdown-item" href="#">Cab</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ps-lg-2">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Accounts
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Hotels</a></li>
+                <li><a class="dropdown-item" href="#">Flights </a></li>
+                <li><a class="dropdown-item" href="#">Tour</a></li>
+                <li><a class="dropdown-item" href="#">Cab</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ps-lg-2">
+              <a
+                class="btn"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ...
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Hotels</a></li>
+                <li><a class="dropdown-item" href="#">Flights </a></li>
+                <li><a class="dropdown-item" href="#">Tour</a></li>
+                <li><a class="dropdown-item" href="#">Cab</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div
+            class="ps-xl-5 col d-block d-lg-flex justify-content-center pt-2"
+          >
+            <div class="dropdown mb-5 mb-md-0">
+              <a
+                class="btn"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                  />
+                </svg>
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Light</a></li>
+                <li><a class="dropdown-item" href="#">Dark </a></li>
+                <li><a class="dropdown-item" href="#">Auto</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a
+                class="btn"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </a>
+
+              <ul
+                class="dropdown-menu search-with-btn"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <li>
+                  <div class="d-flex">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Search"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-primary h-50 text-align-center"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary h-50 text-align-center mt ms-1 ms-xl-1 mt-5 mt-md-0"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Ready to Take off?? -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center" id="ready-to-take-off">
+          <span class=" ">
+            <h2
+              class="px-3 my-lg-4 py-5 display-2 fw-bold text-wrap d-inline-flex"
+            >
+              Ready to take off??
+            </h2>
+          </span>
+
+          <!-- Ticket -->
+
+          <div class="row bg-light ticket">
+            <div class="row pt-3 py-2">
+              <div class="col-6 mx-auto">
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+              </div>
+              <div class="col-9 pt-3 col-sm-3 pt-sm-0 mx-auto">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary w-100 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Class
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Economy</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Business</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">First Class</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-9 pt-3 col-sm-3 pt-sm-0 ps-sm-3 mx-auto">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-secondary w-100 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Traveler
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- From To -->
+            <div class="row bg-light my-1 py-2 my-4 mx-auto">
+              <div
+                class="col-lg-3 mt-2 mt-lg-0 py-2 bg-secondary rounded-3 mx-auto mx-lg-3"
+              >
+                <p><i class="fa-solid fa-location-dot"></i> From</p>
+                <div class="dropdown">
+                  <a
+                    class="btn btn-light w-100 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Class
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Economy</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Business</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">First Class</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <span
+                class="col-1 mx-auto my-auto fs-4 mx-lg-0 d-none d-lg-block"
+              >
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </span>
+              <span
+                class="col-1 mx-auto my-auto fs-4 mx-lg-0 d-block d-lg-none"
+              >
+                <i class="fa-solid fa-arrows-up-down"></i>
+              </span>
+              <div
+                class="col-lg-3 mt-2 mt-lg-0 py-2 bg-secondary rounded-3 mx-auto mx-lg-3"
+              >
+                <p><i class="fa-regular fa-paper-plane"></i> To</p>
+                <div class="dropdown">
+                  <a
+                    class="btn btn-light w-100 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Location
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Economy</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Business</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">First Class</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="col-lg-3 mt-2 mt-lg-0 py-2 bg-secondary rounded-3 mx-auto"
+              >
+                <p><i class="fa-regular fa-calendar"></i> Departure</p>
+                <input
+                  type="date"
+                  class="btn btn-light datepicker_input form-control"
+                  placeholder="Select Date"
+                />
+              </div>
+            </div>
+            <!-- Find Tickets Btn -->
+            <div class="row my-1 py-1 d-none d-lg-block position-relative">
+              <div class="col-3 position-absolute btn-lg-findTicket">
+                <button class="btn btn-primary py-2 px-3" type="submit">
+                  Find Tickets <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="row my-1 py-1 d-lg-none">
+              <div class="col-12">
+                <button class="btn btn-primary py-2 px-3" type="submit">
+                  Find Tickets <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Special offers -->
+    <div class="container-fluid">
+      <span class="">
+        <span class="fw-bold fs-2 ms-lg-5 ps-lg-5 my-3">Special Offers</span>
+      </span>
+      <!-- Cards -->
+      <div class="row">
+        <div
+          class="fs-2 mx-lg-5 px-lg-5 my-3 col-sm-3 card p-4 specialOffer_card1"
+        >
+          <!-- Image -->
+          <img
+            src="https://booking.webestica.com/assets/images/client/07.svg"
+            class="w-75"
+            alt=""
+          />
+          <!-- Card body START -->
+          <div class="card-body mt-4 p-0">
+            <span class="fw-light mb-1">Flat</span>
+            <h4 class="fw-bold mb-1">$899 off</h4>
+            <h6 class="fw-normal">On Domestic Flights</h6>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div
+                class="card-btn-border border-2 border-primary rounded-2 px-3 py-2"
+              >
+                <h5 class="fw-normal user-select-all mb-0">LOG125F</h5>
+              </div>
+              <a href="#" class="btn btn-lg btn-white btn-round mb-0"
+                ><i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Card body END -->
+        </div>
+        <div
+          class="fs-2 mx-lg-5 px-lg-5 my-3 col-sm-3 card p-4"
+          style="background-color: rgba(220, 53, 69, 0.1)"
+        >
+          <!-- Image -->
+          <img
+            src="https://booking.webestica.com/assets/images/client/08.svg"
+            class="w-75"
+            alt=""
+          />
+          <!-- Card body START -->
+          <div class="card-body mt-4 p-0">
+            <span class="fw-light mb-1">Flat</span>
+            <h4 class="fw-bold mb-1">13% off</h4>
+            <h6 class="fw-normal">On Domestic Flights</h6>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div
+                class="card-btn-border border-2 border-primary rounded-2 px-3 py-2"
+              >
+                <h5 class="fw-normal user-select-all mb-0">LOG125F</h5>
+              </div>
+              <a href="#" class="btn btn-lg btn-white btn-round mb-0"
+                ><i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Card body END -->
+        </div>
+        <div
+          class="fs-2 mx-lg-5 px-lg-5 my-3 col-sm-3 card p-4 specialOffer_card1"
+          style="background-color: rgba(23, 162, 184, 0.1)"
+        >
+          <!-- Image -->
+          <img
+            src="https://booking.webestica.com/assets/images/client/09.svg"
+            class="w-75"
+            alt=""
+          />
+          <!-- Card body START -->
+          <div class="card-body mt-4 p-0">
+            <span class="fw-light mb-1">Flat</span>
+            <h4 class="fw-bold mb-1">$2,400 off</h4>
+            <h6 class="fw-normal">On International Flights</h6>
+
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div
+                class="card-btn-border border-2 border-primary rounded-2 px-3 py-2"
+              >
+                <h5 class="fw-normal user-select-all mb-0">LOG125F</h5>
+              </div>
+              <a href="#" class="btn btn-lg btn-white btn-round mb-0"
+                ><i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Card body END -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Destination -->
+
+    <div class="container-fluid">
+      <div class="text-center">
+        <h2 class="fw-bold fs-1 col-12 my-3">Popular Destinations</h2>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-sm-6 col-lg-3">
+          <img
+            class="rounded pD-img"
+            src="https://booking.webestica.com/assets/images/category/flight/01.jpg"
+            alt=""
+          />
+          <div class="mx-lg-2 mx-sm-4 pD-details">
+            <div class="d-flex justify-content-between">
+              <p class="fs-5 fw-bolder">Thailand</p>
+              <p class="fs-5 fw-bolder">
+                4.3 <i class="fa-solid fa-star" style="color: gold"></i>
+              </p>
+            </div>
+            <p class="text-start fw-lighter text-muted">
+              The next flight is on 26th Dec
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img
+            class="rounded pD-img"
+            src="https://booking.webestica.com/assets/images/category/flight/02.jpg"
+            alt=""
+          />
+          <div class="mx-lg-2 mx-sm-4 pD-details">
+            <div class="d-flex justify-content-between">
+              <p class="fs-5 fw-bolder">Maldives</p>
+              <p class="fs-5 fw-bolder">
+                4.8 <i class="fa-solid fa-star" style="color: gold"></i>
+              </p>
+            </div>
+            <p class="text-start fw-lighter text-muted">2 flights every week</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img
+            class="rounded pD-img"
+            src="https://booking.webestica.com/assets/images/category/flight/03.jpg"
+            alt=""
+          />
+          <div class="mx-lg-2 mx-sm-4 pD-details">
+            <div class="d-flex justify-content-between">
+              <p class="fs-5 fw-bolder">Hong Kong</p>
+              <p class="fs-5 fw-bolder">
+                4.6 <i class="fa-solid fa-star" style="color: gold"></i>
+              </p>
+            </div>
+            <p class="text-start fw-lighter text-muted">Daily 1 flight</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img
+            class="rounded pD-img"
+            src="https://booking.webestica.com/assets/images/category/flight/04.jpg"
+            alt=""
+          />
+          <div class="mx-lg-2 mx-sm-4 pD-details">
+            <div class="d-flex justify-content-between">
+              <p class="fs-5 fw-bolder">Switzerland</p>
+              <p class="fs-5 fw-bolder">
+                4.3 <i class="fa-solid fa-star" style="color: gold"></i>
+              </p>
+            </div>
+            <p class="text-start fw-lighter text-muted">
+              Filling fast, next available flight on 2nd Mar
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
